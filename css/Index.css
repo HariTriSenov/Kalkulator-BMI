@@ -1,0 +1,76 @@
+style, .p-1 {
+    color: blue;
+}
+
+h3, p {
+    width: 100%;
+}
+
+
+
+body {
+    background: url(backpat7.png) repeat;
+}
+
+table, .group {
+    border: 2px solid black;
+    background-color: ghostwhite;
+    padding: 0.5rem;
+}
+
+.ket {
+text-align: justify;
+}
+
+.bb {
+    padding-top: 0.5rem;
+}
+
+.tb {
+    padding-top: 0.5rem;
+}
+
+.u {
+    padding-top: 0.5rem;
+}
+
+.h {
+    padding-top: 1rem;
+}
+
+button {
+outline-width: 10px;
+text-shadow: 1px;
+margin-right: 100%;
+margin-left: 45%;
+border-color: blue;
+background-color: cornflowerblue;
+border-radius: 20px;
+}
+
+ol {
+    margin-top: 0px;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+
+  .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  
+  .col {
+    flex: 1 0 0%;
+  }

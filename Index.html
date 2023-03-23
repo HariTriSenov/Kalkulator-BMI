@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title> Kalkulator bmi</title>
+    <link href="css/Index.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
+  
+    
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+
+                <div class="col">
+                    <h2 class="p-1"><i><b>Kalkulator BMI</b></i></h2>
+
+                    
+                    <div class="group">
+                        <form id="form">
+                                <p class="ket"><b>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</b></p>
+                                <!-- Jenis Kelamin -->
+                                    <label class="jk"><b>Jenis Kelamin</b></label>
+                                    <div class="pw">
+                                        <input type="radio" id="p" name="gender" value="pria" checked>
+                                        <label for="pria">Pria</label>
+                                        <input type="radio" id="w" name="gender" value="wanita">
+                                        <label for="wanita">Wanita</label>                    
+                                    </div>
+                                
+                                <!--Berat Badan-->
+                                    <div class="bb">
+                                            <label><b>Berat Badan (kg)</b></label> <br>
+                                            <input id="weight" type="number" required />
+                                    </div>
+                                <!--Usia-->
+                                    <div class="u">
+                                            <label><b>Usia (tahun)</b></label> <br>
+                                            <input id="age" type="number" class="input-age" placeholder="Minimal 18 tahun" required>
+                                    </div>
+                                <!--Tinggi Badan-->
+                                    <div class="tb">
+                                            <label><b>Tinggi badan (cm)</b></label> <br>
+                                            <input id="height"type="number" required />
+                                    </div>
+                                <!-- Tommbol Hitung dan Reset -->
+                                    <div class="h">
+                                        <button id="hasil" class="hitungbmi" onclick="hitungbmi();"><b>Hitung BMI</b></button> <br><br>
+                                        <button id="reset"class="clearbmi" onclick="clearbmi();">Reset</button>
+                                    </div>
+                         </form>
+                    
+                    
+                                <!-- Keterangan -->
+                                <div class="form-group">
+                                    <div class="p-2">
+                                        <h5>Keunggulan fitur</h5>
+                                        <ol>
+                                            <li>
+                                                Menghitung berat badan
+                                            </li>
+                                            <li>
+                                                Menentukan kategori berat badan ideal atau tidak
+                                            </li>
+                                            <li>
+                                                Mempersiapkan program penurunan berat badan
+                                            </li>
+                                        </ol>
+                                        <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                                        <p >Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Ma
+                                    </div>
+                                </div>   
+                    </div>  
+                </div>
+
+                <!-- Hasil Kalkulator BMI -->
+                <div class="col">
+                    <h2 class=""><i><b>Hasil BMI</b></i></h2>
+                    <div class="group">
+                            <div class="form-group">
+                                <div class="text-center">
+                                    <br />
+                                    <h2 style="text-align: center;" id="hasilKualitas">Kualitas</h2>
+                                    <h1 style="text-align: center;"id="hasilBMI">00.00</h1>
+                                    <p style="text-align: center;"id="hasilKet">Keterangan</p>
+                                    <br />
+                                    <a id="downloadBmi" download="hasilBMIMurniTeguh" target="_blank" href="#" class="" >Download Hasil BMI</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <p id="kualitasBMI">
+
+                                </p>
+                                <p id="saranBMI"></p>
+                                <a href="" target="_blank" class="btn btn-outline-dark">Konsultasi Ahli Gizi Via Aplikasi</a>
+                                <a href="" target="_blank" class="btn btn-outline-dark">Registrasi Online Ahli Gizi</a>
+                                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+                            </div>
+
+                            <div class="">
+                                <div class="" id="contentoverweight" style="display:none;">
+                                    <br />
+                                    <h4>Beberapa penyakit yang berasal dari kegemukan</h4>
+                                    <ol style="font-family: Lato-Light, sans-serif; font-weight: 600;">
+                                        <li>
+                                            Diabetes
+                                        </li>
+                                        <li>
+                                            Hipertensi
+                                        </li>
+                                        <li>
+                                            Sakit Jantung
+                                        </li>
+                                        <li>
+                                            Osteoarthritis
+                                        </li>
+                                    </ol>
+                                    <div class="">
+                                        <a href="" target="_blank" class="">Konsultasi Dokter Via Aplikasi</a>
+                                        <a href="" target="_blank" class="">Registrasi Online Sekarang</a>
+                                    </div>
+                                </div>
+
+                                <div class="" id="contentunderweight" style="display:none;">
+                                    <br />
+                                    <h4>Berat rendah dapat menyebabkan berbagai masalah penyakit</h4>
+                                    <ol style="font-family: Lato-Light, sans-serif; font-weight: 600;">
+                                        <li>
+                                            Infertilitas
+                                        </li>
+                                        <li>
+                                            Anemia
+                                        </li>
+                                        <li>
+                                            Osteoporosis
+                                        </li>
+                                        <li>
+                                            Sistem Imun Lemah
+                                        </li>
+                                    </ol>
+                                    <div class="">
+                                        <a href="" target="_blank" class="">Konsultasi Dokter Via Aplikasi</a>
+                                        <a href="" target="_blank" class="">Registrasi Online Sekarang</a>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h4 style="text-align: center;" style="text-align: center;">Download Aplikasi</h4>
+                                    <a href="" target="_blank" class="">
+                                        <img src="" alt="a" title="Aplikasi Murni Teguh" class="" />
+                                    </a>
+                                    <a href="" target="_blank"  class="">
+                                        <img src="" alt="b" title="Aplikasi Murni Teguh" class="" />
+                                    </a>
+                                </div>
+                            </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/Index.js"></script> 
+    </body>
+</html>
