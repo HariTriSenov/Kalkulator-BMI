@@ -1,76 +1,151 @@
-style, .p-1 {
-    color: blue;
-}
-
-h3, p {
+.container {
     width: 100%;
+    display: flexbox;
+    justify-content: center;
 }
 
-
-
-body {
+body{
     background: url(backpat7.png) repeat;
 }
 
-table, .group {
-    border: 2px solid black;
-    background-color: ghostwhite;
-    padding: 0.5rem;
-}
-
-.ket {
-text-align: justify;
-}
-
-.bb {
-    padding-top: 0.5rem;
-}
-
-.tb {
-    padding-top: 0.5rem;
-}
-
-.u {
-    padding-top: 0.5rem;
-}
-
-.h {
-    padding-top: 1rem;
-}
-
-button {
-outline-width: 10px;
-text-shadow: 1px;
-margin-right: 100%;
-margin-left: 45%;
-border-color: blue;
-background-color: cornflowerblue;
-border-radius: 20px;
-}
-
-ol {
-    margin-top: 0px;
-}
-
 .row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
     display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-0.5 * var(--bs-gutter-x));
-    margin-left: calc(-0.5 * var(--bs-gutter-x));
+    padding-top: 30px;
+    padding-left: 200px;
   }
 
-  .row > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
-  }
-  
-  .col {
-    flex: 1 0 0%;
-  }
+.col {
+ 
+    width: 700px;
+    height: 850px;
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #ee5253;
+}
+
+#pria, #wanita {
+    font-size: 18px;
+    font-weight: 50;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 10;
+}
+
+li {
+    font-size: 17px;
+    font-weight: 10;
+}
+
+#w, #h, #u{
+    color: #222f3e;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #341f97;
+    width: 200px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 50;
+}
+
+#w:focus, #h:focus{
+    border-bottom: 2px solid #341f97;
+    width: 300px;
+    transition: 0.5s;
+}
+
+#result{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #fc0410;
+}
+
+#hasilKualitas{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #00a2ff;
+}
+
+#ket {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #0f0e0e;
+}
+
+#btn{
+
+    font-family: inherit;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+    width: 150px;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+
+
+#btns{
+
+    font-family: inherit;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(120deg,#ff6b6b, #1f1f20);
+    width: 100px;
+    padding: 5px;
+    border-radius: 30px;
+
+}
+
+#btnd{
+    font-family: inherit;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(120deg,#47a2ec, #ec6161);
+    width: 100px;
+    padding: 5px;
+    border-radius: 30px;
+
+}
+
+#btnk{
+    font-family: inherit;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(120deg,#47a2ec, #ec6161);
+    width: 100px;
+    padding: 5px;
+    border-radius: 30px;
+
+}
+
+#btn:hover, #btns:hover, #btnd:hover, #btnk:hover{
+    box-shadow: 1px 1px 10px #341f97;
+}
+
+#info{
+    font-size: 12px;
+    font-family: inherit;
+}
