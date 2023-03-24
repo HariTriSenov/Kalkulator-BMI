@@ -13,7 +13,7 @@ function BMI(){
     }
     if (bmi < 19) {
         document.getElementById("hasilKualitas").innerHTML = "Berat Badan Kurang";
-        document.getElementById("ket").innerHTML = "Anda kekurangan berat badan";
+        document.getElementById("ket").innerHTML = "Anda Kekurangan Berat Badan";
         document.getElementById("saranBMI").innerHTML = "Anda berada dalam kategori kekurangan berat badan. <br /> Hubungi dokter lebih lanjut mengenai pola makan dan gizi yang baik untuk meningkatkan kesehatan.";
         document.getElementById("kualitasBMI").innerHTML = "Hasil BMI < 18.5";
         document.getElementById("contentunderweight").style.display = "block";
